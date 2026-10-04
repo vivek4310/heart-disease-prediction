@@ -4,6 +4,10 @@ A machine learning-powered web application that estimates the likelihood of hear
 
 The application uses a trained machine learning model integrated with **Streamlit** to provide an interactive interface where users can enter patient information and receive an estimated risk score.
 
+## 🚀 Live Demo
+
+👉 [Open the Live App](https://heart-disease-prediction-4xbtpms7ygoerrhbgeprts.streamlit.app)
+
 ## 🚀 Features
 
 - Interactive web interface built with Streamlit
