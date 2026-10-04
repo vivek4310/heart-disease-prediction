@@ -51,7 +51,21 @@ if go:
     if prob < 0.40:
         st.success("The model estimates a lower risk score.")
     elif prob <= 0.60:
-        st.warning("The model result is borderline. Consider professional medical evaluation.")
+        st.markdown(
+            """
+            <div style="
+                background-color: #D4A72C;
+                color: #1F1F1F;
+                padding: 14px 18px;
+                border-radius: 8px;
+                font-weight: 600;
+                border-left: 6px solid #9A7410;
+            ">
+                ⚠️ The model result is borderline. Consider professional medical evaluation.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
     else:
         st.error("The model estimates a higher risk score. Please consult a doctor.")
     st.caption("Trained on 918 patients, ~86% accuracy on held-out data. "
