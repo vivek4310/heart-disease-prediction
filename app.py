@@ -49,10 +49,10 @@ if go:
     st.subheader(f"Estimated risk: {prob:.0%}")
     st.progress(prob)
     if prob < 0.40:
-    st.success("The model estimates a lower risk score.")
-elif prob <= 0.60:
-    st.warning("The model result is borderline. Consider professional medical evaluation.")
-else:
-    st.error("The model estimates a higher risk score. Please consult a doctor.")
+        st.success("The model estimates a lower risk score.")
+    elif prob <= 0.60:
+        st.warning("The model result is borderline. Consider professional medical evaluation.")
+    else:
+        st.error("The model estimates a higher risk score. Please consult a doctor.")
     st.caption("Trained on 918 patients, ~86% accuracy on held-out data. "
                "A low score does not rule out heart disease.")
